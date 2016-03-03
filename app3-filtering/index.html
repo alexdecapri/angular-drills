@@ -1,7 +1,11 @@
 <html ng-app="app3">
 	<body ng-controller="controller">
 
-		{{ test }}
+		<input placeholder="Filter" ng-model="filterer"></input>
+
+		<div ng-repeat="person in people | filter : filterer">
+			Name: {{ person.name }} / Phone: {{ person.phone }}
+		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
