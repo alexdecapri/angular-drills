@@ -1,6 +1,13 @@
 <html ng-app="apiApp">
 	<body ng-controller="controller">
 
+		<div ng-repeat="smurf in smurfArr">
+			<p>
+				<img src="{{smurf.img}}">
+				Name: {{smurf.name}}, ID: {{smurf.id}}
+			</p>
+		</div>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
